@@ -83,7 +83,7 @@ async def nsfw_check(e):
                 LOGS.info(r)
                 return
             score = int(k * 100)
-            if score > 45:
+            if score > 85:
                 nsfw += 1
             os.remove(pic)
         if nsfw:
