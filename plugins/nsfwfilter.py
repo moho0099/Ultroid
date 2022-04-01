@@ -90,7 +90,7 @@ async def nsfw_check(e):
             await e.delete()
             if NWARN.get(e.sender_id):
                 count = NWARN[e.sender_id] + 1
-                if count < 3:
+                if count < 30000000000000:
                     NWARN.update({e.sender_id: count})
                     return await ultroid_bot.send_message(
                         chat,
